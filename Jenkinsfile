@@ -6,5 +6,12 @@ pipeline {
                 git branch: 'prod' , url: 'https://github.com/bkrrajmali/terraform-aws-morning-jenkins.git'
             }
         }
+        stage('Terraform Init') { 
+            steps {
+                script {
+                    sh 'terraform --version'
+                }
+            }
+        }
     }
 }
