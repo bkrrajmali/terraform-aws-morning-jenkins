@@ -13,5 +13,12 @@ pipeline {
                 }
             }
         }
+        stage('Terraform validate') { 
+            steps {
+                script {
+                    sh 'terraform validate'
+                }
+            }
+        }
     }
 }
